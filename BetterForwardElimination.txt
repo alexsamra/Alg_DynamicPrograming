@@ -1,0 +1,11 @@
+At the point in the matrix when I = 2  J = 3  K = 2 the matrix will look like this...
+
+2 2  3  |  15
+0 0 .5  |  1.5
+0 0 -.5 | -1.5
+
+The problem occurs when you try and find temp you will divide by 0
+This can only occur when all rows under the pivot are equal to 0 
+To fix this all you need to do is say if A[i,i] = 0 then set temp = 0
+You can do this because you know all other rows in that column below it are 0 so you won't be subtracting anymore
+

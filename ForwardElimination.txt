@@ -1,0 +1,18 @@
+After looping through all values of K for J = 2 your matrix will look like this...
+
+1 1 1 | 6
+0 0 1 | 3
+1 2 3 | 14
+
+When you then incrament J to 3 and loop through all of K the matrix looks like this...
+
+1 1 1 | 6
+0 0 1 | 3
+0 1 2 | 8
+
+The issue occurs when you then incrament I to 2
+
+When dividing A[3,2] by A[2,2] you get 1/0 which is impossible thus failing to provide the answer
+
+Better forward elimination continues to move the pivot row depending on the largest value in that column which keeps you from dividing by 0
+Because when I = 2 it will switch the 2nd and 3rd row so A[2,2] != 0
